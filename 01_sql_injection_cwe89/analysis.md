@@ -9,7 +9,7 @@ In `vulnerable.py`, the application uses Python f-strings to build the SQL comma
 query = f"SELECT * FROM users WHERE username = '{username}'..."
 ```
 
-## Atention
+## Attention
 
 We cannot rely on regex alone to sanitize the username and password. Sanitization is complex. You would have to predict all the character combinations that the database interprets.
 
