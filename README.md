@@ -1,40 +1,40 @@
 # AppSec Remediation Lab
 
-Este repositório documenta exercícios práticos de **Code Review** e **Secure Coding**, focando na identificação de vulnerabilidades comuns (baseadas no OWASP Top 10 e CWE) e na implementação de correções seguras.
+This repo is my personal gym for **Code Review** and **Secure Coding**. The goal is simple: I hunt down common vulnerabilities (OWASP Top 10 / CWE) in bad code and rewrite it to be bulletproof.
 
 ## ⚠️ Disclaimer
 
-**Este repositório contém intencionalmente código vulnerável para fins educacionais.**
-O objetivo é demonstrar padrões de correção e mitigação. Não utilize os exemplos da pasta `vulnerable/` em ambientes de produção.
+**This repository contains intentionally vulnerable code for educational purposes**
 
-## 🎯 Objetivo
+I built this for educational purposes only. Do not copy-paste the stuff from the `vulnerable/` folder into your production environment, or you will get hacked. Seriously.
 
-O foco deste projeto é desenvolver maturidade em:
-1.  **Análise Estática (SAST):** Identificar falhas de segurança lendo o código fonte.
-2.  **Root Cause Analysis:** Entender por que o código é vulnerável.
-3.  **Remediação:** Aplicar patches que resolvem o problema na raiz, sem quebrar a funcionalidade.
+## 🎯 The Goal
 
-## 📂 Estrutura do Projeto
+This project is focused on developing maturity on:
+1. **Static Analysis (SAST):** Identify security issues reading all the source-code.
+2. **Root Cause Analysis:** Understand why the code is vulnerable.
+3. **Remediation:** Patching the flaw without killing the feature.
 
-Cada diretório representa uma categoria de vulnerabilidade e contém:
-* `vulnerable.[ext]`: O código original contendo a falha.
-* `secure.[ext]`: O código refatorado com as devidas correções.
-* `analysis.md`: Uma breve explicação técnica do vetor de ataque e da defesa aplicada.
+## 📂 How it works
 
-## Taxonomia e Padrões
+Each folder covers a specific vulnerability type:
+* `vulnerable.[ext]`: The raw, vulnerable code (the problem).
+* `secure.[ext]`: The refactored, clean version (the solution).
+* `analysis.md`: My notes on how the attack works and why the fix works.
 
-As correções seguem as recomendações de frameworks e bases de conhecimento da indústria:
+## Taxonomy and Standards
+
+I'm not reinventing the wheel. The fixes follow standard industry guidelines:
 * **OWASP Top 10** (2021)
 * **CWE** (Common Weakness Enumeration)
-* **ASVS** (Application Security Verification Standard) - Nível 1/2
+* **ASVS** (Application Security Verification Standard) - Level 1/2
 
-## Exemplos Cobertos
+## What's inside so far
 
-| Categoria (OWASP/CWE) | Arquivo | Status |
+| Category (OWASP/CWE) | Directory | Status |
 | --------------------- | ------- | ------ |
 | SQL Injection (CWE-89) | `sql_injection/` | ✅ Patched |
 | XSS Reflected (CWE-79) | `xss/` | ✅ Patched |
-| Insecure Deserialization (CWE-502) | `deserialization/` | 🚧 Em análise |
-
+| Insecure Deserialization (CWE-502) | `deserialization/` | 🚧 Work in Progress |
 ---
-*Este laboratório é mantido para fins de aprimoramento profissional em Segurança de Aplicações.*
+*Just a dev trying to make the web a safer place. Let's break (and fix) things.*
